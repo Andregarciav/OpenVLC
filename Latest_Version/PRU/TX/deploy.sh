@@ -58,10 +58,20 @@ echo "-Placing the firmware"
 	
 
 echo "-Configuring pinmux"
-	config-pin -a P8_45 pruout
-	config-pin -q P8_45
-	config-pin -a P8_46 pruout
-	config-pin -q P8_46
+	config-pin -a P8_39 pruout # LED 1
+	config-pin -a P8_40 pruout # LED 2
+	config-pin -a P8_41 pruout # LED 3
+	config-pin -a P8_42 pruout # LED 4
+	config-pin -a P8_28 pruin  # PD
+	config-pin -q P8_39 # LED 1
+	config-pin -q P8_40 # LED 2
+	config-pin -q P8_41 # LED 3
+	config-pin -q P8_42 # LED 4
+	config-pin -q P8_28 # PD
+	# config-pin -a P8_45 pruout
+	# config-pin -q P8_45
+	# config-pin -a P8_46 pruout
+	# config-pin -q P8_46
 
 echo "Loading PRU"
 	

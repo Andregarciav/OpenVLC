@@ -53,22 +53,32 @@ echo "-Placing the firmware"
 	cp gen/main_pru1_fw.out /lib/firmware/am335x-pru1-fw
 
 echo "-Configuring pinmux"
-	config-pin -a P8_29 pruout # debug
-	config-pin -a P8_27 pruout # debug
-	config-pin -a P9_30 pruin # MISO PD
-	config-pin -a P9_31 pruout # CS PD
-	config-pin -a P9_28 pruout # MOSI PD
-	config-pin -a P8_15 pruin # MISO LL
-	config-pin -a P8_12 pruout # CS LL
-	config-pin -a P8_11 pruout # MOSI LL
-	config-pin -q P8_29
-	config-pin -q P8_27
-	config-pin -q P9_30
-	config-pin -q P9_31
-	config-pin -q P9_28
-	config-pin -q P8_15
-	config-pin -q P8_12
-	config-pin -q P8_11
+	config-pin -a P8_39 pruout # LED 1
+	config-pin -a P8_40 pruout # LED 2
+	config-pin -a P8_41 pruout # LED 3
+	config-pin -a P8_42 pruout # LED 4
+	config-pin -a P8_28 pruin  # PD
+	config-pin -q P8_39 # LED 1
+	config-pin -q P8_40 # LED 2
+	config-pin -q P8_41 # LED 3
+	config-pin -q P8_42 # LED 4
+	config-pin -q P8_28 # PD
+	# config-pin -a P8_29 pruout # debug
+	# config-pin -a P8_27 pruout # debug
+	# config-pin -a P9_30 pruin # MISO PD
+	# config-pin -a P9_31 pruout # CS PD
+	# config-pin -a P9_28 pruout # MOSI PD
+	# config-pin -a P8_15 pruin # MISO LL
+	# config-pin -a P8_12 pruout # CS LL
+	# config-pin -a P8_11 pruout # MOSI LL
+	# config-pin -q P8_29
+	# config-pin -q P8_27
+	# config-pin -q P9_30
+	# config-pin -q P9_31
+	# config-pin -q P9_28
+	# config-pin -q P8_15
+	# config-pin -q P8_12
+	# config-pin -q P8_11
 
 echo "-Rebooting"
 	
